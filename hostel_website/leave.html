@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-person-walking-arrow-right logo-icon"></i>
+            <h2 style="margin: 0;">Leave Portal</h2>
+        </div>
+        <nav>
+            <a href="hostel.html"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
+        </nav>
+    </header>
+
+    <div class="center-view">
+        <div class="feedback-container glass-panel">
+            <h2 style="text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px;">Student Leave Form</h2>
+            
+            <form id="leaveForm" onsubmit="alert('Leave application submitted!'); window.location.href='hostel.html'; return false;">
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input type="text" id="studentId" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Student Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="leaveReason">Reason for Leave</label>
+                    <select id="leaveReason" required>
+                        <option value="">Select Reason...</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Urgent">Urgent</option>
+                        <option value="Marriage">Marriage</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="details">Additional Details (Dates/Explanation)</label>
+                    <textarea id="details" rows="3" required></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="margin-top: 10px;">Apply for Leave</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

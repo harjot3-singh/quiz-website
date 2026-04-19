@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Weather Forecast</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1><i class="fa-solid fa-cloud-sun-rain"></i> WeatherCast</h1>
+            <p>Real-time forecast at your fingertips</p>
+        </header>
+
+        <div class="search-section">
+            <div class="input-wrapper">
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="city-input" placeholder="Enter city name (e.g., London, Tokyo)" autocomplete="off">
+            </div>
+            <button id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+        </div>
+
+        <div class="error-message" id="error-message"></div>
+
+        <div class="weather-card" id="weather-card" style="display: none;">
+            <div class="location-header">
+                <h2 id="city-name">--</h2>
+                <p id="date-current">--</p>
+            </div>
+
+            <div class="weather-main">
+                <div class="temperature">
+                    <h1 id="temp">--°C</h1>
+                    <p id="weather-description">--</p>
+                </div>
+                <div class="weather-icon-container">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail-box">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <div>
+                        <p class="label">Feels Like</p>
+                        <p class="value" id="feels-like">--°C</p>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <p class="label">Humidity</p>
+                        <p class="value" id="humidity">--%</p>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <p class="label">Wind Speed</p>
+                        <p class="value" id="wind-speed">-- m/s</p>
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <div>
+                        <p class="label">Pressure</p>
+                        <p class="value" id="pressure">-- hPa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

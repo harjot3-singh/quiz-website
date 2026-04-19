@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <i class="fa-solid fa-comment-dots logo-icon"></i>
+            <h2 style="margin: 0;">Feedback Portal</h2>
+        </div>
+        <nav>
+            <a href="hostel.html"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</a>
+        </nav>
+    </header>
+
+    <div class="center-view">
+        <div class="feedback-container glass-panel">
+            <h2 style="text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px;">Faculty Feedback Form</h2>
+            
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input type="text" id="studentName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Student Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="faculty">Faculty Name</label>
+                    <select id="faculty" required>
+                        <option value="">Select Faculty...</option>
+                        <option value="Dr. Sharma">Dr. Sharma</option>
+                        <option value="Prof. Singh">Prof. Singh</option>
+                        <option value="Dr. Kaur">Dr. Kaur</option>
+                        <option value="Prof. Verma">Prof. Verma</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Rating</label>
+                    <input type="hidden" id="selectedRating" name="rating">
+                    <div class="rating-group">
+                        <div class="rating-chip" data-value="Excellent">Excellent</div>
+                        <div class="rating-chip" data-value="Good">Good</div>
+                        <div class="rating-chip" data-value="Average">Average</div>
+                        <div class="rating-chip" data-value="Poor">Poor</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="positive">Positive Aspects</label>
+                    <textarea id="positive" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="improvement">Areas for Improvement</label>
+                    <textarea id="improvement" rows="3" required></textarea>
+                </div>
+
+                <button type="submit" class="btn" style="margin-top: 10px;">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
